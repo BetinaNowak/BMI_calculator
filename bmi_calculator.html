@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Linker til Bootstrap CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" href="jquery-ui.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<title>BMI Calculator</title>
+<!-- jQuery UI -->
+<script src="jquery-ui.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<!-- Bootstrap grid -->
+
+	<div class="container">
+
+		<div class="row">
+
+			<!-- Non breaking space in the empty rows -->
+			<div class="col">&nbsp;</div>
+
+			<div class="col-md-6">
+			<!-- Content -->
+				<br>
+				<h1 class="display-4 text-center">BMI Calculator</h1>
+
+				<div class="jumbotron">
+				<form onSubmit="return calculateBMI()">
+				<div class="form-group">
+
+				<label for="weight">Your weight in kg:</label>
+				<!--number=tillader at skrive hele numre   -   step="0.01": tillader at skrive kommatal-->
+				<input class="form-control" type="number" step="0.01" name="weight" title="We ask for your weight only for statistical purposes." placeholder="Your weight (in kg)" required>
+
+				<label for="height">Your height in m:</label>
+					<input class="form-control" type="number" step="0.01" name="height" placeholder="Your height (in m)" required>
+
+				<button class="btn btn-primary btn-lg btn-block mt-4" type="submit">Calculate your BMI</button></div>
+				</form>
+
+	<!--"msg" = "message"-->
+	<h2 id="msg">...</h2>
+	</div>
+			</div>
+
+			<div class="col">&nbsp;</div>
+
+		<!-- Row class end -->
+		</div>
+
+	<!-- Container class end -->
+	</div>
+
+
+
+
+
+
+	<script src="bmi_calculator.js"></script>
+
+
+</body>
+</html>
